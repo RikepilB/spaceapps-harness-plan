@@ -9,12 +9,20 @@
       "name": "spaceapps-harness",
       "source": "./plugins/spaceapps-harness",
       "description": "Full participation harness for the NASA International Space Apps Challenge: research, dataset discovery, challenge selection, team design, 30-hour build planning, science validation, submission audit and pitch production.",
-      "version": "0.3.0",
-      "author": { "name": "Richard Pillaca" },
+      "version": "0.4.0",
+      "author": {
+        "name": "Richard Pillaca"
+      },
       "license": "MIT",
       "category": "productivity",
       "displayName": "Space Apps Harness",
-      "keywords": ["hackathon", "nasa", "space-apps", "open-data", "earth-observation"]
+      "keywords": [
+        "hackathon",
+        "nasa",
+        "space-apps",
+        "open-data",
+        "earth-observation"
+      ]
     }
   ]
 }

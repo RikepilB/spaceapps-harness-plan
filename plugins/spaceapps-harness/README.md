@@ -1,7 +1,7 @@
 # Space Apps Harness
 
 A participation harness for the NASA International Space Apps Challenge: nine subagents
-and ten skills covering the whole arc from "which challenge do we pick" to "the judges
+and eleven skills covering the whole arc from "which challenge do we pick" to "the judges
 scored our submission".
 
 Built against the 2025 results set (11,500+ submissions, 1,290+ global nominees,
@@ -42,6 +42,7 @@ Presentation. Every component in this plugin maps back to one of those five.
 | `judge-simulation` | "score our project", "judge us", "mock judging" |
 | `team-building` | "who should I recruit", "what roles do we need", "team formation" |
 | `sandcastle-orchestration` | "run agents in parallel", "run the evals", "sandcastle" |
+| `session-handoff` | "write a handoff", "document what we did", "export this session" |
 
 ## Install
 

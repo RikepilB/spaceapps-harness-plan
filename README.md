@@ -25,7 +25,7 @@ its steps has a deadline attached, so do it before the hackathon, not on the day
 
 **Skills** — `spaceapps-brief`, `challenge-selection`, `nasa-data-access`,
 `award-targeting`, `team-building`, `hackathon-war-room`, `project-page-builder`,
-`demo-video`, `judge-simulation`, `sandcastle-orchestration`.
+`demo-video`, `judge-simulation`, `sandcastle-orchestration`, `session-handoff`.
 
 ## How the team uses it
 
@@ -36,6 +36,7 @@ its steps has a deadline attached, so do it before the hackathon, not on the day
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Changing the harness and getting it released |
 | [CLAUDE.md](CLAUDE.md) | Shared context every teammate's Claude reads automatically |
 | [evals/](evals/) | Regression tests that keep the agents honest |
+| [docs/handoff/](docs/handoff/) | Session history. Start at `HANDOFF.md` for current state |
 
 ## Why the evals exist
 
