@@ -1,0 +1,7 @@
+node_modules/
+.sandcastle/.env
+.sandcastle/logs/
+evals/results/*
+!evals/results/.gitkeep
+*.log
+.DS_Store

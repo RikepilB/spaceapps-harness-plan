@@ -1,0 +1,17 @@
+{
+  "name": "spaceapps-harness",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Claude Code plugin marketplace and eval suite for the NASA Space Apps Challenge harness",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-plugin.mjs",
+    "evals": "tsx evals/run-evals.ts"
+  },
+  "devDependencies": {
+    "@ai-hero/sandcastle": "*",
+    "tsx": "*",
+    "typescript": "*"
+  },
+  "license": "MIT"
+}
