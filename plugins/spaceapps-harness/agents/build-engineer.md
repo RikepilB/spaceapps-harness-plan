@@ -1,25 +1,25 @@
 ---
 name: build-engineer
-description: Use this agent to implement a Space Apps project against an agreed plan under hackathon time pressure, biased toward shipping a demonstrable path over architectural purity.
+description: |
+  Use this agent to implement a Space Apps project against an agreed plan under hackathon time pressure, biased toward shipping a demonstrable path over architectural purity.
 
-<example>
-Context: Plan is set, data manifest exists, build starting.
-user: "Start building the dashboard against the manifest"
-assistant: "I'll use build-engineer to get the end-to-end path up."
-<commentary>
-Implementation under a clock needs different defaults than production work.
-</commentary>
-</example>
+  <example>
+  Context: Plan is set, data manifest exists, build starting.
+  user: "Start building the dashboard against the manifest"
+  assistant: "I'll use build-engineer to get the end-to-end path up."
+  <commentary>
+  Implementation under a clock needs different defaults than production work.
+  </commentary>
+  </example>
 
-<example>
-Context: Demo is breaking in front of judges.
-user: "The map component crashes when the API is slow"
-assistant: "Let me bring in build-engineer to make the failure path graceful."
-<commentary>
-Demo resilience is a Presentation concern, not just a correctness one.
-</commentary>
-</example>
-
+  <example>
+  Context: Demo is breaking in front of judges.
+  user: "The map component crashes when the API is slow"
+  assistant: "Let me bring in build-engineer to make the failure path graceful."
+  <commentary>
+  Demo resilience is a Presentation concern, not just a correctness one.
+  </commentary>
+  </example>
 model: opus
 color: green
 ---

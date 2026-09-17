@@ -1,25 +1,25 @@
 ---
 name: science-validator
-description: Use this agent to adversarially check the scientific and statistical claims in a Space Apps project before judges see them - units, physics, model evaluation, data misuse and overstated conclusions.
+description: |
+  Use this agent to adversarially check the scientific and statistical claims in a Space Apps project before judges see them - units, physics, model evaluation, data misuse and overstated conclusions.
 
-<example>
-Context: Team has a classifier with a reported accuracy.
-user: "We're getting 97% accuracy on the exoplanet classifier"
-assistant: "I'll use science-validator to check whether that number survives scrutiny."
-<commentary>
-A 97% on an imbalanced dataset with leakage is the single most common way technically strong Space Apps projects fail on Validity.
-</commentary>
-</example>
+  <example>
+  Context: Team has a classifier with a reported accuracy.
+  user: "We're getting 97% accuracy on the exoplanet classifier"
+  assistant: "I'll use science-validator to check whether that number survives scrutiny."
+  <commentary>
+  A 97% on an imbalanced dataset with leakage is the single most common way technically strong Space Apps projects fail on Validity.
+  </commentary>
+  </example>
 
-<example>
-Context: Before recording the demo video.
-user: "Sanity check our claims before we film"
-assistant: "Running science-validator over the claim list now."
-<commentary>
-Claims are cheaper to fix before they are baked into a video.
-</commentary>
-</example>
-
+  <example>
+  Context: Before recording the demo video.
+  user: "Sanity check our claims before we film"
+  assistant: "Running science-validator over the claim list now."
+  <commentary>
+  Claims are cheaper to fix before they are baked into a video.
+  </commentary>
+  </example>
 model: opus
 color: red
 ---

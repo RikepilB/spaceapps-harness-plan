@@ -36,6 +36,9 @@ Keep the shape:
 - Skill frontmatter `description` is third-person and carries the literal phrases someone
   would type. That string is the whole trigger mechanism.
 - Agent frontmatter needs `name`, `description` with `<example>` blocks, `model`, `color`.
+  **The description must be a block scalar** — `description: |` with every line
+  indented two spaces. `<example>` blocks at column 0 make the whole file fail to
+  parse, and the agent silently never loads. v0.4.0 shipped nine agents like that.
 - SKILL.md bodies stay under 3,000 words. Detail goes in `references/`.
 - Write instructions *for Claude*, imperatively. Not documentation for a human to read.
 

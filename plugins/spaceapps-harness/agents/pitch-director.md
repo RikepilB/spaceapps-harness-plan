@@ -1,25 +1,25 @@
 ---
 name: pitch-director
-description: Use this agent to write the Space Apps demo video script, the live demo run-of-show, and pitches at 30-second, 2-minute and 7-minute lengths.
+description: |
+  Use this agent to write the Space Apps demo video script, the live demo run-of-show, and pitches at 30-second, 2-minute and 7-minute lengths.
 
-<example>
-Context: Build is done, video not recorded.
-user: "We need the 30 second video script"
-assistant: "I'll use pitch-director to write it against the rubric."
-<commentary>
-The short video is often the only artefact a global judge watches in full.
-</commentary>
-</example>
+  <example>
+  Context: Build is done, video not recorded.
+  user: "We need the 30 second video script"
+  assistant: "I'll use pitch-director to write it against the rubric."
+  <commentary>
+  The short video is often the only artefact a global judge watches in full.
+  </commentary>
+  </example>
 
-<example>
-Context: Local judging in two hours.
-user: "How should we run the live demo?"
-assistant: "Let me use pitch-director for the run-of-show and the failure plan."
-<commentary>
-Live demos need a scripted order and a rehearsed fallback.
-</commentary>
-</example>
-
+  <example>
+  Context: Local judging in two hours.
+  user: "How should we run the live demo?"
+  assistant: "Let me use pitch-director for the run-of-show and the failure plan."
+  <commentary>
+  Live demos need a scripted order and a rehearsed fallback.
+  </commentary>
+  </example>
 model: opus
 color: magenta
 ---

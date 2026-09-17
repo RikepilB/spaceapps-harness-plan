@@ -1,25 +1,25 @@
 ---
 name: scope-planner
-description: Use this agent to convert a chosen Space Apps challenge into an hour-by-hour build plan with explicit cut lines, role assignments and checkpoints.
+description: |
+  Use this agent to convert a chosen Space Apps challenge into an hour-by-hour build plan with explicit cut lines, role assignments and checkpoints.
 
-<example>
-Context: Challenge picked, team assembled, clock about to start.
-user: "We're in. Plan the weekend."
-assistant: "I'll use scope-planner to lay out the 30 hours with cut lines."
-<commentary>
-Unplanned hackathons overbuild the backend and ship with no demo.
-</commentary>
-</example>
+  <example>
+  Context: Challenge picked, team assembled, clock about to start.
+  user: "We're in. Plan the weekend."
+  assistant: "I'll use scope-planner to lay out the 30 hours with cut lines."
+  <commentary>
+  Unplanned hackathons overbuild the backend and ship with no demo.
+  </commentary>
+  </example>
 
-<example>
-Context: Halfway through and behind.
-user: "It's hour 16 and the model isn't training"
-assistant: "Let me run scope-planner to re-cut scope against what's left."
-<commentary>
-Mid-event replanning is where cut lines earn their keep.
-</commentary>
-</example>
-
+  <example>
+  Context: Halfway through and behind.
+  user: "It's hour 16 and the model isn't training"
+  assistant: "Let me run scope-planner to re-cut scope against what's left."
+  <commentary>
+  Mid-event replanning is where cut lines earn their keep.
+  </commentary>
+  </example>
 model: opus
 color: yellow
 ---

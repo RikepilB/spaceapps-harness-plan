@@ -1,25 +1,25 @@
 ---
 name: data-scout
-description: Use this agent to find, verify and document the actual datasets a Space Apps project will run on, producing a data manifest with working endpoints, auth requirements, formats and fetch code.
+description: |
+  Use this agent to find, verify and document the actual datasets a Space Apps project will run on, producing a data manifest with working endpoints, auth requirements, formats and fetch code.
 
-<example>
-Context: Team picked a challenge and needs data now.
-user: "We need the precipitation data for this. Where do we get it?"
-assistant: "I'll use data-scout to build a verified data manifest with endpoints and a fetch snippet."
-<commentary>
-Dataset discovery on the day is the most common way teams lose their first six hours.
-</commentary>
-</example>
+  <example>
+  Context: Team picked a challenge and needs data now.
+  user: "We need the precipitation data for this. Where do we get it?"
+  assistant: "I'll use data-scout to build a verified data manifest with endpoints and a fetch snippet."
+  <commentary>
+  Dataset discovery on the day is the most common way teams lose their first six hours.
+  </commentary>
+  </example>
 
-<example>
-Context: A download keeps failing.
-user: "Earthdata search gives me a 401"
-assistant: "Let me bring in data-scout to sort the Earthdata Login and token flow."
-<commentary>
-Auth-gated NASA endpoints have specific failure modes that need the domain knowledge.
-</commentary>
-</example>
-
+  <example>
+  Context: A download keeps failing.
+  user: "Earthdata search gives me a 401"
+  assistant: "Let me bring in data-scout to sort the Earthdata Login and token flow."
+  <commentary>
+  Auth-gated NASA endpoints have specific failure modes that need the domain knowledge.
+  </commentary>
+  </example>
 model: opus
 color: green
 ---

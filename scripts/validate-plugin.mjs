@@ -34,10 +34,56 @@ function frontmatter(text) {
   return end === -1 ? null : text.slice(4, end);
 }
 
-/** Top-level scalar lookup. Good enough here: we never nest in this frontmatter. */
-function field(fm, key) {
-  const m = fm.match(new RegExp(`^${key}:\\s*(.+)$`, "m"));
-  return m ? m[1].trim() : null;
+/**
+ * Strict-enough YAML check for frontmatter, without a YAML dependency.
+ *
+ * This exists because the first version of this validator only checked that fields
+ * were PRESENT — it regex-matched `^model:` anywhere in the block — so nine agent
+ * files whose frontmatter did not parse at all sailed through with 22 green ticks.
+ * The real loader rejected every one of them.
+ *
+ * The failure was a plain scalar followed by raw `<example>` blocks at column 0:
+ *
+ *     description: Use this agent when...
+ *
+ *     <example>            <-- YAML sees a key here, finds no colon, gives up
+ *
+ * So the rule enforced here: inside frontmatter every non-blank line is either
+ * indented (a continuation) or a `key:` at column 0. Nothing else is legal, and that
+ * one rule catches the whole class.
+ *
+ * Returns { fields, errors } — `fields` maps a top-level key to its inline value.
+ */
+function checkFrontmatter(fm) {
+  const errors = [];
+  const fields = Object.create(null);
+  const KEY = /^([A-Za-z_][A-Za-z0-9_-]*):(.*)$/;
+  let current = null;
+
+  fm.split("\n").forEach((line, i) => {
+    const lineNo = i + 2; // +1 for 0-index, +1 for the opening ---
+    if (line.trim() === "") return;
+    if (/^[ \t]/.test(line)) {
+      // A continuation line. Legal only once a key has opened.
+      if (current === null) errors.push(`line ${lineNo}: indented text before any key`);
+      return;
+    }
+    const m = KEY.exec(line);
+    if (!m) {
+      errors.push(
+        `line ${lineNo}: "${line.slice(0, 40)}" is neither indented nor a "key:" — ` +
+          `frontmatter is not valid YAML. A multi-line value must use a block scalar ` +
+          `(e.g. "description: |") with every line indented.`,
+      );
+      current = null;
+      return;
+    }
+    if (m[1] in fields) errors.push(`line ${lineNo}: duplicate key "${m[1]}"`);
+    current = m[1];
+    fields[current] = m[2].trim();
+  });
+
+  return { fields, errors };
 }
 
 function readJson(path) {
@@ -131,12 +177,17 @@ for (const entry of marketplace?.plugins ?? []) {
         fail(`skill ${name}: no YAML frontmatter`);
         continue;
       }
-      const skillName = field(fm, "name");
-      if (skillName !== name) {
-        fail(`skill ${name}: frontmatter name "${skillName}" does not match directory`);
+      const { fields, errors: fmErrors } = checkFrontmatter(fm);
+      if (fmErrors.length) {
+        for (const e of fmErrors) fail(`skill ${name}: ${e}`);
+        continue;
+      }
+      if (fields.name !== name) {
+        fail(`skill ${name}: frontmatter name "${fields.name}" does not match directory`);
       }
       // The description is the entire trigger mechanism. A skill with none never fires.
-      if (!/^description:/m.test(fm)) fail(`skill ${name}: no description`);
+      if (!("description" in fields)) fail(`skill ${name}: no description`);
+
 
       const words = text.split(/\s+/).filter(Boolean).length;
       if (words > MAX_SKILL_WORDS) {
@@ -157,21 +208,36 @@ for (const entry of marketplace?.plugins ?? []) {
         fail(`agent ${stem}: no YAML frontmatter`);
         continue;
       }
-      if (field(fm, "name") !== stem) fail(`agent ${stem}: frontmatter name does not match filename`);
-      if (!/^description:/m.test(fm)) fail(`agent ${stem}: no description`);
+      const { fields, errors: fmErrors } = checkFrontmatter(fm);
+      if (fmErrors.length) {
+        for (const e of fmErrors) fail(`agent ${stem}: ${e}`);
+        continue;
+      }
+      if (fields.name !== stem) fail(`agent ${stem}: frontmatter name does not match filename`);
+      if (!("description" in fields)) fail(`agent ${stem}: no description`);
       if (!KEBAB.test(stem) || stem.length < 3 || stem.length > 50) {
-        fail(`agent ${stem}: name must be kebab-case, 3–50 chars`);
+        fail(`agent ${stem}: name must be kebab-case, 3-50 chars`);
       }
 
-      const model = field(fm, "model");
-      const color = field(fm, "color");
+      const model = fields.model;
+      const color = fields.color;
       if (!model) fail(`agent ${stem}: missing model`);
       else if (!AGENT_MODELS.has(model)) fail(`agent ${stem}: invalid model "${model}"`);
       if (!color) fail(`agent ${stem}: missing color`);
       else if (!AGENT_COLORS.has(color)) fail(`agent ${stem}: invalid color "${color}"`);
 
+      // A description carrying <example> blocks must be a block scalar or the file
+      // does not parse at all. Catch the near-miss where the examples are written
+      // but the "|" is forgotten.
+      const hasExamples = fm.includes("<example>");
+      if (hasExamples && !/^[|>]/.test(fields.description ?? "")) {
+        fail(
+          `agent ${stem}: description contains <example> blocks but is not a block ` +
+            `scalar - write "description: |" and indent the body two spaces`,
+        );
+      }
       // Examples are what teach the router when to reach for this agent.
-      if (!fm.includes("<example>")) warn(`agent ${stem}: description has no <example> block`);
+      if (!hasExamples) warn(`agent ${stem}: description has no <example> block`);
 
       if (model && color) pass(`agent ${stem} (${model}/${color})`);
     }

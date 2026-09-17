@@ -17,3 +17,6 @@ jobs:
       # structural break is caught in seconds rather than after an npm install.
       - name: Validate marketplace and plugin structure
         run: node scripts/validate-plugin.mjs
+
+      - name: Validator regression test
+        run: node scripts/test-validator.mjs

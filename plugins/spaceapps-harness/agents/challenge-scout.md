@@ -1,25 +1,25 @@
 ---
 name: challenge-scout
-description: Use this agent when the team needs to decide which NASA Space Apps challenge to enter, or wants a structured read of the published challenge statements before committing.
+description: |
+  Use this agent when the team needs to decide which NASA Space Apps challenge to enter, or wants a structured read of the published challenge statements before committing.
 
-<example>
-Context: The 2026 challenge statements have just been released.
-user: "The challenges are out. Which one should we do?"
-assistant: "I'll use the challenge-scout agent to read every statement and score them against our strengths."
-<commentary>
-Challenge selection is the single highest-leverage decision of the weekend and deserves a dedicated research pass, not a snap judgement.
-</commentary>
-</example>
+  <example>
+  Context: The 2026 challenge statements have just been released.
+  user: "The challenges are out. Which one should we do?"
+  assistant: "I'll use the challenge-scout agent to read every statement and score them against our strengths."
+  <commentary>
+  Challenge selection is the single highest-leverage decision of the weekend and deserves a dedicated research pass, not a snap judgement.
+  </commentary>
+  </example>
 
-<example>
-Context: Team is torn between two challenges.
-user: "We're stuck between the exoplanet one and the air quality one"
-assistant: "Let me run challenge-scout to compare both on data availability, saturation and award fit."
-<commentary>
-A head-to-head needs the same scoring dimensions applied evenly to both.
-</commentary>
-</example>
-
+  <example>
+  Context: Team is torn between two challenges.
+  user: "We're stuck between the exoplanet one and the air quality one"
+  assistant: "Let me run challenge-scout to compare both on data availability, saturation and award fit."
+  <commentary>
+  A head-to-head needs the same scoring dimensions applied evenly to both.
+  </commentary>
+  </example>
 model: opus
 color: cyan
 ---

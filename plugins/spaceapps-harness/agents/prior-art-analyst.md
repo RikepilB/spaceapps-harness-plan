@@ -1,25 +1,25 @@
 ---
 name: prior-art-analyst
-description: Use this agent to research what has already won or placed at NASA Space Apps for a given challenge or theme, so the team can avoid rebuilding a saturated idea and can see what judges actually rewarded.
+description: |
+  Use this agent to research what has already won or placed at NASA Space Apps for a given challenge or theme, so the team can avoid rebuilding a saturated idea and can see what judges actually rewarded.
 
-<example>
-Context: Team is considering an exoplanet AI challenge.
-user: "Has anyone won with an exoplanet classifier before?"
-assistant: "I'll use prior-art-analyst to pull the past winners and finalists in that lane."
-<commentary>
-Knowing that Resonant Exoplanets took Best Use of Data in 2025 changes how the team must differentiate.
-</commentary>
-</example>
+  <example>
+  Context: Team is considering an exoplanet AI challenge.
+  user: "Has anyone won with an exoplanet classifier before?"
+  assistant: "I'll use prior-art-analyst to pull the past winners and finalists in that lane."
+  <commentary>
+  Knowing that Resonant Exoplanets took Best Use of Data in 2025 changes how the team must differentiate.
+  </commentary>
+  </example>
 
-<example>
-Context: Team wants to know what a winning project looks like.
-user: "What do the winning projects actually have in common?"
-assistant: "Let me run prior-art-analyst across the 2021-2025 winner set."
-<commentary>
-Pattern extraction across years is research, not recall.
-</commentary>
-</example>
-
+  <example>
+  Context: Team wants to know what a winning project looks like.
+  user: "What do the winning projects actually have in common?"
+  assistant: "Let me run prior-art-analyst across the 2021-2025 winner set."
+  <commentary>
+  Pattern extraction across years is research, not recall.
+  </commentary>
+  </example>
 model: opus
 color: blue
 tools: ["WebSearch", "WebFetch", "Read", "Write", "Bash", "Grep", "Glob"]

@@ -1,25 +1,25 @@
 ---
 name: submission-auditor
-description: Use this agent to score a draft Space Apps submission against the real judging rubric and return a prioritized fix list before the deadline.
+description: |
+  Use this agent to score a draft Space Apps submission against the real judging rubric and return a prioritized fix list before the deadline.
 
-<example>
-Context: Project page drafted, hours left on the clock.
-user: "Here's our project page draft. Is it good enough?"
-assistant: "I'll use submission-auditor to score it against the five criteria and list the fixes by payoff."
-<commentary>
-Self-assessment against the actual rubric is the highest-return activity in the final six hours.
-</commentary>
-</example>
+  <example>
+  Context: Project page drafted, hours left on the clock.
+  user: "Here's our project page draft. Is it good enough?"
+  assistant: "I'll use submission-auditor to score it against the five criteria and list the fixes by payoff."
+  <commentary>
+  Self-assessment against the actual rubric is the highest-return activity in the final six hours.
+  </commentary>
+  </example>
 
-<example>
-Context: Team wants to know what is missing.
-user: "What are we losing points on?"
-assistant: "Running submission-auditor over the submission now."
-<commentary>
-Losing points is specific and findable; "it feels weak" is not.
-</commentary>
-</example>
-
+  <example>
+  Context: Team wants to know what is missing.
+  user: "What are we losing points on?"
+  assistant: "Running submission-auditor over the submission now."
+  <commentary>
+  Losing points is specific and findable; "it feels weak" is not.
+  </commentary>
+  </example>
 model: opus
 color: yellow
 ---

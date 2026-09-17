@@ -1,25 +1,25 @@
 ---
 name: team-architect
-description: Use this agent to audit a Space Apps team's capabilities against a target challenge, produce a prioritized recruiting spec, and assign roles and a communication plan.
+description: |
+  Use this agent to audit a Space Apps team's capabilities against a target challenge, produce a prioritized recruiting spec, and assign roles and a communication plan.
 
-<example>
-Context: One person has registered and needs a team.
-user: "It's just me so far. Who should I be looking for?"
-assistant: "I'll use team-architect to audit the gap and write the recruiting spec."
-<commentary>
-Recruiting against a measured gap beats recruiting whoever is available.
-</commentary>
-</example>
+  <example>
+  Context: One person has registered and needs a team.
+  user: "It's just me so far. Who should I be looking for?"
+  assistant: "I'll use team-architect to audit the gap and write the recruiting spec."
+  <commentary>
+  Recruiting against a measured gap beats recruiting whoever is available.
+  </commentary>
+  </example>
 
-<example>
-Context: Team of five assembled, roles unclear.
-user: "We have five people. How do we split this up?"
-assistant: "Let me run team-architect to assign roles and set the checkpoint schedule."
-<commentary>
-Role assignment is cheap before the event and impossible during it.
-</commentary>
-</example>
-
+  <example>
+  Context: Team of five assembled, roles unclear.
+  user: "We have five people. How do we split this up?"
+  assistant: "Let me run team-architect to assign roles and set the checkpoint schedule."
+  <commentary>
+  Role assignment is cheap before the event and impossible during it.
+  </commentary>
+  </example>
 model: opus
 color: cyan
 ---
