@@ -8,8 +8,8 @@ external account, so do not leave it to the day.
 In Claude Code:
 
 ```
-/plugin marketplace add RikepilB/spaceapps-harness
-/plugin install spaceapps-harness@spaceapps-harness
+/plugin marketplace add RikepilB/spaceapps-harness-plan
+/plugin install spaceapps-harness@spaceapps-harness-plan
 ```
 
 Check it took: ask Claude *"what are the Space Apps judging criteria"*. You should get

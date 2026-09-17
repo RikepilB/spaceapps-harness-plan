@@ -49,8 +49,8 @@ Presentation. Every component in this plugin maps back to one of those five.
 This plugin ships from a marketplace in the same repo:
 
 ```
-/plugin marketplace add RikepilB/spaceapps-harness
-/plugin install spaceapps-harness@spaceapps-harness
+/plugin marketplace add RikepilB/spaceapps-harness-plan
+/plugin install spaceapps-harness@spaceapps-harness-plan
 ```
 
 ## Setup

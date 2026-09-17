@@ -217,7 +217,7 @@ Files a successor should open first, in order:
 
 **Blocker: nothing is pushed.** No remote. The install commands in `README.md` and on
 the Crew Readiness Board do not resolve until someone pushes to
-`RikepilB/spaceapps-harness`. This was deliberate — creating a public repo under the
+`RikepilB/spaceapps-harness-plan`. This was deliberate — creating a public repo under the
 operator's name is theirs to authorise — but it means the collaboration layer is
 inert until they act.
 
@@ -254,7 +254,7 @@ preparing to build, it has failed at the thing it was for.
 
 ## 9. Next steps, in priority order
 
-1. **Push the repo.** `git remote add origin git@github.com:RikepilB/spaceapps-harness.git && git push -u origin main`. Nothing else in the collaboration layer works until this happens.
+1. **Push the repo.** `git remote add origin git@github.com:RikepilB/spaceapps-harness-plan.git && git push -u origin main`. Nothing else in the collaboration layer works until this happens.
 2. **Recruit a designer.** Highest marginal score impact, and it is what unlocks the Stellar Stories archetype that currently fails the scope gate.
 3. **Create the team yourself** on the Space Apps site, so the submission clock follows a timezone you control.
 4. **Run the evals once for real**, with Docker up, and fix whatever breaks in `run-evals.ts`. Do this well before November.
