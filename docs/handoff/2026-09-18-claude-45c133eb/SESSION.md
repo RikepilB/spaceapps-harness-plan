@@ -22,7 +22,7 @@ Factual record. Inferences and next steps are in `HANDOFF.md`.
 
 ## Decisions taken by the operator
 
-- **Email:** redact `ridi.pillaca@gmail.com` from `2026-09-14-claude-01TzNqng/SESSION.md`;
+- **Email:** redact the operator's email address from `2026-09-14-claude-01TzNqng/SESSION.md`;
   leave commit author emails alone (no history rewrite). The old file version is still
   in history at `66c68db`; the same address is on every commit's author line anyway.
 - **Artifact:** link the Crew Readiness Board from the README, labelled team-only. It
