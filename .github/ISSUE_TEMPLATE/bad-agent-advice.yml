@@ -1,0 +1,61 @@
+name: An agent gave bad advice
+description: The highest-value report there is. Paste what it actually said.
+title: "[agent] "
+labels: ["agent-defect"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prompts fail silently. The only evidence that one is wrong is its output, so
+        the paste below is the whole report — a summary of what it "sort of said"
+        cannot be turned into a fixture.
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which agent or skill
+      options:
+        - challenge-scout
+        - prior-art-analyst
+        - data-scout
+        - team-architect
+        - scope-planner
+        - build-engineer
+        - science-validator
+        - submission-auditor
+        - pitch-director
+        - a skill (name it below)
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: What you asked it
+      description: The prompt, verbatim.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: What it said
+      description: Its output, verbatim. Trim it, but do not paraphrase it.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should have said, and how you know
+      description: >
+        Name the source if there is one. This is the sentence that becomes the
+        scoring key, so it needs to be checkable — "it should have caught the
+        swapped declination", not "it should have been better".
+    validations:
+      required: true
+  - type: checkboxes
+    id: fixture
+    attributes:
+      label: Fixture
+      options:
+        - label: I can write the failing input into `evals/fixtures/` myself
+        - label: I need someone else to turn this into a fixture

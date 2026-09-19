@@ -11,7 +11,7 @@ notice a gap  ->  write a fixture  ->  change the agent  ->  run evals  ->  PR  
 
 ### 1. Notice a gap
 
-Gaps show up in three ways, all of them worth a issue:
+Gaps show up in three ways, all of them worth an issue:
 
 - **An agent gave bad advice.** Paste what it said. This is the highest-value report.
 - **A link in the catalogue is dead**, or a dataset moved. Cheap to fix, and it costs

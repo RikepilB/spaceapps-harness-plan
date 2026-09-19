@@ -1,0 +1,38 @@
+name: A stage of the weekend has no owner
+description: You did something during the event that none of the nine agents covered.
+title: "[gap] "
+labels: ["coverage-gap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read `CONTRIBUTING.md` first. A new agent has to earn its slot against a real
+        failure someone hit — not against the feeling that the arc is incomplete.
+        Nine is already a lot to hold in your head.
+  - type: textarea
+    id: what
+    attributes:
+      label: What you were doing
+      description: The actual task, at the actual hour.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: Which existing agent you reached for, and how it fell short
+      description: >
+        If you did not reach for one, say that — an agent nobody thinks to invoke is
+        a description problem, not a missing agent.
+    validations:
+      required: true
+  - type: dropdown
+    id: shape
+    attributes:
+      label: What you think it needs
+      options:
+        - A new section in an existing agent or skill
+        - A better description so the existing one triggers
+        - A new skill
+        - A new agent
+    validations:
+      required: true

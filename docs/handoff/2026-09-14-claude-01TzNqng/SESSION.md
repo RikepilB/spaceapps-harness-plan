@@ -10,7 +10,7 @@ inference in `HANDOFF.md` and is not repeated here.
 | Session id | `01TzNqng9bCxiL7dCbTjyP72` |
 | Agent | Claude Opus 5, Cowork (cloud container, remote) |
 | Dates | 13 Sep 2026 – 14 Sep 2026 |
-| Operator | Richard Pillaca (ridi.pillaca@gmail.com) |
+| Operator | Richard Pillaca |
 | Repo at export | `spaceapps-harness`, 1 commit, `e4a57f0`, branch `main`, no remote |
 | Working dir | ephemeral cloud container; repo also delivered as a zip |
 
