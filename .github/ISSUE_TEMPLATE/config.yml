@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Event rules, dates and the judging rubric
+    url: https://www.spaceappschallenge.org/
+    about: Always the authority. Anything dated in this repo is a cached copy that may have drifted.
+  - name: How to change an agent and get it released
+    url: https://github.com/RikepilB/spaceapps-harness-plan/blob/main/CONTRIBUTING.md
+    about: Write the fixture first, then change the prompt, then run the evals.

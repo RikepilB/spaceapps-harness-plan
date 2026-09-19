@@ -1,0 +1,39 @@
+name: Dead link or moved dataset
+description: A URL in the catalogue that 404s, redirects somewhere useless, or now needs auth it did not need before.
+title: "[data] "
+labels: ["dead-link", "nasa-data-access"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cheap to fix now. Costs someone an hour at 02:00 on the Saturday if it is not.
+  - type: input
+    id: url
+    attributes:
+      label: The URL
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: Where it appears
+      placeholder: plugins/spaceapps-harness/skills/nasa-data-access/references/data-catalogue.md
+    validations:
+      required: true
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: What happens
+      options:
+        - 404 / does not resolve
+        - Redirects to something unrelated
+        - Now requires auth it did not require before
+        - Dataset retired or superseded
+        - Still up, but the latency makes it wrong for its stated use
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Replacement URL, if you found one
+      description: Only list it if you loaded it and it resolved.

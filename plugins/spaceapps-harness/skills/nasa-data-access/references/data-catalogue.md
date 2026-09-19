@@ -95,7 +95,7 @@ needs to predict rather than describe, start here instead.
 - TEMPO (hourly North American air quality) - https://www.earthdata.nasa.gov/data/instruments/tempo
 - TEMPO near-real-time viewer - https://weather.ndc.nasa.gov/sport/viewer/
 - Atmospheric Science Data Center - https://asdc.larc.nasa.gov/ and tutorials at https://nasa.github.io/ASDC_Data_and_User_Services/
-- Pandora / Pandonia ground network - https://pandora.gsfc.nasa.gov/ , data at http://data.pandonia-global-network.org/
+- Pandora / Pandonia ground network - https://pandora.gsfc.nasa.gov/ , data at https://pandonia-global-network.org/
 - TOLNet ozone lidar - https://tolnet.larc.nasa.gov/
 - AirNow - https://www.airnow.gov/
 - OpenAQ (global ground stations) - https://openaq.org/
