@@ -11,8 +11,10 @@ is stable year to year; the dates move.
 - Hackathon: **14–15 November 2026**. Submissions close on the **local event's** clock.
 - On the Universal Event, the deadline follows the local time of **whoever created the
   team**.
-- Teams: 2–6 members, all registered for the same event. One team per person, one
-  challenge per team.
+- Teams: **at most six** members, all registered for the same event. One team per
+  person, one challenge per team. The 2026 page states no minimum; the original
+  research recorded solo entry as allowed. Do not tell a solo participant they cannot
+  enter (#9 tracks confirming it).
 - **No work on the challenges before the hackathon opens.** Accounts, tooling, reading
   and team formation beforehand are fine. Code and assets are not.
 - Judging: five criteria, equally weighted — Impact, Creativity, Validity, Relevance,
