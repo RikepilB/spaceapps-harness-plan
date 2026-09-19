@@ -30,4 +30,4 @@ No team members recruited yet. Challenge not chosen (summaries are out; full sta
 | Date | Package | Agent | Summary |
 |---|---|---|---|
 | 2026-09-13/14 | [2026-09-14-claude-01TzNqng](2026-09-14-claude-01TzNqng/) | Claude Opus 5 (Cowork) | Researched Space Apps end to end, built the harness plugin v0.1.0→v0.3.0, stress-tested it and fixed six real defects, published two artifacts, packaged the repo as a plugin marketplace |
-| 2026-09-18 | — (see PR "open-source release") | Claude Opus 5 (Claude Code) | Made the repo public: MIT licence, issue forms, PR template, weekly link check (found and fixed a 410), README rewrite with verified 2026 dates, team-only Crew Readiness Board link, milestones and issues seeded from the audit |
+| 2026-09-18 | [2026-09-18-claude-45c133eb](2026-09-18-claude-45c133eb/) | Claude Opus 5 (Claude Code) | Made the repo public: MIT licence, issue forms, PR template, weekly link check (found and fixed a 410), README rewrite with verified 2026 dates, team-only Crew Readiness Board link, milestones and issues seeded from the audit |
