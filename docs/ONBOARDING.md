@@ -15,6 +15,10 @@ In Claude Code:
 Check it took: ask Claude *"what are the Space Apps judging criteria"*. You should get
 Impact, Creativity, Validity, Relevance, Presentation — not a web search.
 
+On Richard's team? Tick each step below off on the
+[Crew Readiness Board](https://claude.ai/artifact/Sg5wekdyyznqAZVjtygwTv) as you go.
+It is team-only: ask Richard for access.
+
 ## 2. Register for the event (3 min)
 
 1. Create an account at spaceappschallenge.org

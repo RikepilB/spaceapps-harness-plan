@@ -33,8 +33,11 @@ const DEFENDED = [
   "www2.inpe.br",
 ];
 
-// Not a browsable page: an OPeNDAP endpoint, a query stub, a placeholder key.
+// Not a browsable page: an OPeNDAP endpoint, a query stub, a placeholder key. Also this
+// repo's own GitHub pages: they 404 on a fork, a private copy, or before the first
+// workflow run, and they are not what a teammate follows at 02:00.
 const SKIP = [
+  /github\.com\/RikepilB\/spaceapps-harness-plan/,
   /api_key=YOUR_KEY/,
   /opendap\.nccs\.nasa\.gov\/dods\//,
   /gibs\.earthdata\.nasa\.gov\/wmts\//,
